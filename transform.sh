@@ -22,5 +22,4 @@ cp ../xslt-json/*.xsl xslt-json/
 java -cp ${PATH_TO_SAXON_JAR} net.sf.saxon.Transform \
   -o:${OUTPUT_GOOGLE_DOC_JSON_FILE} \
   -s:${PATH_TO_INPUT_XML_FILE} \
-  -xsl:${PATH_TO_XSLT_STYLESHEET} \
-  path.to.temp.file.directory="../build"
+  -xsl:${PATH_TO_XSLT_STYLESHEET}
