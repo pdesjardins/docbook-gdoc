@@ -13,7 +13,14 @@ OUTPUT_GOOGLE_DOC_JSON_FILE="build/google-doc-source.json"
 rm -rf build
 mkdir build
 
+# Copy the XSLT files from the separate xslt-json project into this directory
+
+rm -rf xslt-json
+mkdir xslt-json
+cp ../xslt-json/*.xsl xslt-json/
+
 java -cp ${PATH_TO_SAXON_JAR} net.sf.saxon.Transform \
   -o:${OUTPUT_GOOGLE_DOC_JSON_FILE} \
   -s:${PATH_TO_INPUT_XML_FILE} \
-  -xsl:${PATH_TO_XSLT_STYLESHEET}
+  -xsl:${PATH_TO_XSLT_STYLESHEET} \
+  path.to.temp.file.directory="../build"
