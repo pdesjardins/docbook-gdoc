@@ -1,2 +1,5 @@
 build
 saxon9he.jar
+xslt-json
+.DS_Store
+test-content/*.xml~
